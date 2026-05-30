@@ -1,0 +1,13 @@
+kafka-python==2.0.2
+pyspark==3.5.1
+requests==2.31.0
+pandas==2.2.2
+sqlalchemy
+psycopg2-binary==2.9.9
+scikit-learn==1.4.2
+textblob==0.18.0
+python-dotenv==1.0.1
+apache-airflow==2.9.1
+dbt-postgres==1.8.0
+praw==7.7.1
+google-api-python-client==2.131.0

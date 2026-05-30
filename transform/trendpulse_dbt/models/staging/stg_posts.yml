@@ -1,0 +1,30 @@
+cat > transform/trendpulse_dbt/models/staging/stg_posts.yml << 'EOF'
+version: 2
+
+models:
+  - name: stg_posts
+    description: "Cleaned and standardised Reddit posts"
+    columns:
+      - name: post_id
+        description: "Unique post identifier"
+        tests:
+          - unique
+          - not_null
+      - name: upvotes
+        description: "Number of upvotes"
+        tests:
+          - not_null
+      - name: subreddit
+        description: "Subreddit name (lowercased)"
+        tests:
+          - not_null
+      - name: engagement_tier
+        description: "high / medium / low based on upvotes"
+        tests:
+          - accepted_values:
+              values: ['high', 'medium', 'low']
+      - name: time_of_day
+        tests:
+          - accepted_values:
+              values: ['morning', 'afternoon', 'evening', 'night']
+EOF
