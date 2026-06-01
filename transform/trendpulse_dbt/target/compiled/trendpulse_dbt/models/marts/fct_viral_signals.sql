@@ -1,5 +1,5 @@
 WITH posts AS (
-    SELECT * FROM {{ ref('stg_posts') }}
+    SELECT * FROM "trendpulse"."analytics"."stg_posts"
 )
 
 SELECT

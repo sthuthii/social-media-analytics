@@ -1,4 +1,9 @@
-WITH source AS (
+
+  create view "trendpulse"."analytics"."stg_posts__dbt_tmp"
+    
+    
+  as (
+    WITH source AS (
     SELECT * FROM raw_posts
 ),
 
@@ -45,3 +50,4 @@ cleaned AS (
 )
 
 SELECT * FROM cleaned
+  );

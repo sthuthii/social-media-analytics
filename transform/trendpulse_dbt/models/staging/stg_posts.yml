@@ -1,4 +1,3 @@
-cat > transform/trendpulse_dbt/models/staging/stg_posts.yml << 'EOF'
 version: 2
 
 models:
@@ -27,4 +26,3 @@ models:
         tests:
           - accepted_values:
               values: ['morning', 'afternoon', 'evening', 'night']
-EOF

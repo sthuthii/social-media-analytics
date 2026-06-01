@@ -1,5 +1,15 @@
-WITH posts AS (
-    SELECT * FROM {{ ref('stg_posts') }}
+
+  
+    
+
+  create  table "trendpulse"."analytics"."fct_engagement__dbt_tmp"
+  
+  
+    as
+  
+  (
+    WITH posts AS (
+    SELECT * FROM "trendpulse"."analytics"."stg_posts"
 )
 
 SELECT
@@ -18,3 +28,5 @@ SELECT
 FROM posts
 GROUP BY subreddit
 ORDER BY viral_rate_pct DESC
+  );
+  

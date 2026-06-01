@@ -1,5 +1,15 @@
-WITH posts AS (
-    SELECT * FROM {{ ref('stg_posts') }}
+
+  
+    
+
+  create  table "trendpulse"."analytics"."fct_viral_signals__dbt_tmp"
+  
+  
+    as
+  
+  (
+    WITH posts AS (
+    SELECT * FROM "trendpulse"."analytics"."stg_posts"
 )
 
 SELECT
@@ -22,3 +32,5 @@ SELECT
     is_viral,
     scraped_at
 FROM posts
+  );
+  
